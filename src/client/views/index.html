@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Travel Planner</title>
+</head>
+ <body>
+
+  <div class ="headline">
+    <div id='my'>MY</div>
+    <div id='travel'>Travel</div>
+    <div id='planner'>Planner</div>
+  </div>
+<section>
+  <div class = "imgHolder">
+    <div id="photo"></div>
+  </div>
+
+  <div class = "facts">
+    <div class ="holderlocation">
+      <label for="location"> My trip to:</label>
+      <input type="text" id="location" placeholder=" Enter Location">
+    </div>
+
+    <div class ="holderdate">
+      <label for="date">Departing:</label>
+      <input type="text" id="date" placeholder=" MM/DD/YY">
+    </div>
+
+    <div class= "mybuttons">
+      <button onclick="Client.performAction(event)" id="save" type = "submit"> Go Travel! </button>
+      <button onclick="Client.performDelete(event)" id="delete" type = "submit"> Remove Trip </button>
+    </div>
+
+    <div class ="entry">
+      <div class = "title">Trip Info</div>
+        <div id = "entryHolder">
+        <div id = "ourlocation"></div>
+        <div id = "country"></div>
+        <div id = "days"></div>
+      </div>
+      <div class = "title">Typical weather for then is</div>
+        <div id = "entryWeather">
+        <div id = "temperature"></div>
+        <div id = "prognosisHigh"></div>
+        <div id = "prognosisLow"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  Travel app By Anna Winther
+</footer>
+</body>
+</html>
