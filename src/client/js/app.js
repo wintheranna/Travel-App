@@ -66,7 +66,7 @@ const updateUI = async () => {
   const request = await fetch('http://localhost:8083/all');
   try {
     const allData = await request.json();
-    document.getElementById('ourlocation').innerHTML = allData.location + ',';
+    document.getElementById('ourLocation').innerHTML = allData.location + ',';
     document.getElementById('country').innerHTML = allData.country + ' is';
     document.getElementById('days').innerHTML = allData.daysleft + ' days away!';
   } catch(error) {

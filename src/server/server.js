@@ -28,17 +28,15 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
+const port = 8083;
+
 // Initialize the main project folder
 app.use(express.static('./dist'));
 
-// Spin up the server
-const port = 8083;
-
-// Callback to debug
-const server = app.listen(port, listening);
-
-function listening() {
-  console.log(`server running on localhost: ${port}`);
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(8083, function () {
+    console.log(`server running on localhost: ${port}`);
+  });
 }
 
 app.get('/', function (req, res) {
