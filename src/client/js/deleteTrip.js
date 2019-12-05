@@ -1,4 +1,4 @@
-// Function called by Event Listener, delete data
+// Function called by event listener, delete data
 function performDelete(event) {
   document.getElementById('ourlocation').innerHTML = '';
   document.getElementById('country').innerHTML = '';

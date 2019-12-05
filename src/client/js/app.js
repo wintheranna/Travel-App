@@ -1,20 +1,19 @@
-
 // Function called by event listener
 function performAction(event) {
+  // user input
   let newlocation = document.getElementById('location').value;
-
-// count days left to departure
-  let newDate = document.getElementById('date').value;
-  let date2 = new Date(newDate);
-  let weatherDate = (date2.getTime()) / 1000;
-  let date1 = new Date();
-  let timeDiff = Math.ceil(date2.setHours(0, 0, 0) - date1.setHours(0, 0, 0)) / (1000 * 3600 * 24);
-  let daysLeft = timeDiff.toFixed(0);
-
+  // count days left to departure
+  let departure = document.getElementById('date').value;
+  let departureDate = new Date(departure);
+  let dateToday = new Date();
+  let dateDiff = Math.ceil(departureDate.setHours(0, 0, 0) - dateToday.setHours(0, 0, 0)) / (1000 * 3600 * 24);
+  let daysLeft = dateDiff.toFixed(0);
+  let weatherDate = (departureDate.getTime()) / 1000;
   // Personal API Key for GeoNames API
   const apiKey = '&username=anwin';
   const baseUrl = 'http://api.geonames.org/searchJSON?q=';
-// get and post data, update UI
+
+  // GET and POST data, update user interface
   getData(baseUrl, newlocation, apiKey)
   .then( (data) => {
     postData('http://localhost:8083/save', {
@@ -26,7 +25,7 @@ function performAction(event) {
       futureWeather: weatherDate
     });
   }).then( () => {
-      updateWeather('http://localhost:8083/api');
+    updateWeather('http://localhost:8083/api');
     }).then( () => {
       updateUI('http://localhost:8083/all');
       }).then( () => {
@@ -34,7 +33,7 @@ function performAction(event) {
         });
 }
 
-// Function to GET Web GeoNames API Data
+// Function to GET GeoNames API Data
 const getData = async (baseUrl, newlocation, apiKey) => {
   const response = await fetch(baseUrl+newlocation+apiKey);
   try {
@@ -42,7 +41,7 @@ const getData = async (baseUrl, newlocation, apiKey) => {
     return data;
   } catch(error) {
       console.log('error', error);
-  }
+    }
 }
 
 // Function to POST data
@@ -72,13 +71,12 @@ const updateUI = async () => {
     document.getElementById('days').innerHTML = allData.daysleft + ' days away!';
   } catch(error) {
       console.log('error', error);
-  }
+    }
 }
 
 // Function to GET Project Data weather
 const updateWeather = async () => {
-  const api_url = 'http://localhost:8083/api';
-  const response = await fetch(api_url);
+  const response = await fetch('http://localhost:8083/api');
   try {
     const json = await response.json();
     document.getElementById('temperature').innerHTML = json.hourly.summary;
@@ -86,36 +84,33 @@ const updateWeather = async () => {
     document.getElementById('prognosisLow').innerHTML = 'Low - ' + json.daily.data[0].temperatureLow + ' °F';
   } catch(error) {
       console.log('error', error);
-  }
+    }
 }
 
 // Function to GET Project Data photo
 const updatePhoto = async () => {
-  const our_url = 'http://localhost:8083/photo';
-  const response = await fetch(our_url);
+  const response = await fetch('http://localhost:8083/photo');
   try {
     const json = await response.json();
     console.log(json.hits[0].webformatURL);
     document.getElementById('photo').innerHTML = '<img src='+json.hits[0].webformatURL+'>';
-
   } catch(error) {
       console.log('error', error);
       updatePhoto2();
-  }
+    }
 }
 
 // If no city photo available , update with country photo
 const updatePhoto2 = async () => {
-  const our_url = 'http://localhost:8083/photo2';
-  const response = await fetch(our_url);
+  const response = await fetch('http://localhost:8083/photo2');
   try {
     const json = await response.json();
     console.log(json.hits[0].webformatURL);
     document.getElementById('photo').innerHTML = '<img src='+json.hits[0].webformatURL+'>';
-
   } catch(error) {
       console.log('error', error);
   }
 }
+
 
 export {performAction}

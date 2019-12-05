@@ -1,9 +1,9 @@
 const dotenv = require('dotenv');
 dotenv.config();
 // Personal API key for DarkSky API and Pixabay API
-const keyDS = process.env.dsKey;
+const keyDS = process.env.DS_KEY;
 const urlDS = 'https://api.darksky.net/forecast/';
-const keyPB = process.env.pbKey;
+const keyPB = process.env.PB_KEY;
 const urlPB = 'https://pixabay.com/api/';
 const fetch = require('node-fetch');
 

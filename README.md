@@ -1,8 +1,13 @@
-Weather-Journal App Project
+Travel Planner App
 
-This project creates an asynchronous web app that uses Web API and user data to dynamically update the UI.
+This project creates an asynchronous web app that uses Web API's and user data to dynamically update the UI.
+
+- Fetches weather forecast for given location at a given time
+- Fetches a photo of the choosen location
+- Counts down to departure
+- Delete button for erasing current trip
 
 
-Author:
-Anna Winther - Created the server.js file and the website/app.js file (minor modifications to style elements in the style.css file).
-Udacity - Created the style.css and index.html file.
+Author - Anna Winther
+
+/ Udacity Project

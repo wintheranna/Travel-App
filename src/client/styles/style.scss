@@ -1,88 +1,99 @@
-body{
-    background: #fffff8;
-    font-family: sans-serif;
-    background: url('../media/Photo.jpg') center center/cover no-repeat #333;
+body {
+  background: #fffff8;
+  font-family: sans-serif;
+  background: url('../media/Photo.jpg') center center/cover no-repeat #333;
+
 }
 
-section{
-    display: flex;
-    align-items: center;
-    height: 70vh;
-    background: #7896c7cf;
-    color: #eefaff;
-    justify-content: space-between;
-    font-size: 20px;
-    font-family: sans-serif;
+section {
+  display: flex;
+  align-items: center;
+  height: 70vh;
+  background: #7896c7cf;
+  color: #eefaff;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: sans-serif;
+
 }
 
-.imgHolder{
+.imgHolder {
   margin-left: 100px;
 
 }
 
-#photo img{
+#photo img {
   width: 300px;
   height: 300px;
 
 }
 
-.facts{
+.facts {
   padding-bottom: 40px;
   padding-right: 80px;
 
 }
 
-.entry{
+.entry {
   margin-top: 20px;
   background: rgba(59, 74, 107, .4);
+
 }
 
-#entryHolder{
+#entryHolder {
   display: flex;
+
 }
 
-#ourlocation{
+#ourlocation {
   margin-right: 2px;
+
 }
 
-#country{
+#country {
   margin-right: 2px;
+
 }
 
-#days{
+#days {
   margin-right: 2px;
   margin-left: 4px;
+
 }
 
-#temperature{
+#temperature {
   margin-left: 4px;
 
 }
 
-#prognosisHigh{
+#prognosisHigh {
   margin-left: 4px;
   margin-top: 4px;
   margin-bottom: 10px;
   font-size: 14px;
+
 }
 
-#prognosisLow{
+#prognosisLow {
   margin-left: 4px;
   margin-top: 4px;
   margin-bottom: 10px;
   font-size: 14px;
+
 }
 
-.holderlocation{
+.holderlocation {
   display: flex;
   margin: 15px;
+
 }
 
 #location {
   margin-left: 5px;
+
 }
 
-.holderdate{
+.holderdate {
   display: flex;
   margin: 15px;
 
@@ -91,20 +102,22 @@ section{
 #generate {
   margin-left: 30px;
   margin-bottom: 30px;
+
 }
 
-#entryHolder{
+#entryHolder {
   margin: 8px;
   font-style: italic;
   font-size: 16px;
+
 }
 
-#entryWeather{
+#entryWeather {
   margin: 8px;
   font-style: italic;
   font-size: 16px;
-}
 
+}
 
 .headline {
   display: flex;
@@ -113,57 +126,66 @@ section{
   font-size: 40px;
   color: white;
   text-align: center;
+  word-spacing: 30px;
+  text-shadow: 1px 1px 2px #f1f1f1;
+
 }
 
-#my {
+/*#my {
   text-shadow: 1px 1px 2px #f1f1f1;
+
 }
 
-#planner {
-  text-shadow: 1px 1px 2px #f1f1f1;
-}
 #travel {
   margin-left: 30px;
   margin-right: 30px;
   text-shadow: 1px 1px 2px #f1f1f1;
 
 }
-.title{
+
+#planner {
+  text-shadow: 1px 1px 2px #f1f1f1;
+
+}*/
+
+.title {
   margin-left: 8px;
   color: #2d333e;
 
 }
 
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
-    font-size: 27px;
-    margin-top: 10px;
-    margin-right: 10px;
+label {
+  display:block;
+  font-size: 27px;
+  margin-top: 10px;
+  margin-right: 10px;
+
 }
 
-input{
-    display:block;
-    height: 60px;
-    width: 320px;
-    background: #9bcae082;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    border: none;
+input {
+  display:block;
+  height: 60px;
+  width: 320px;
+  background: #9bcae082;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: sans-serif;
+  border: none;
+
 }
 
-button{
-    width: 90px;
-    height: 30px;
-    background: #607aa0ba;
-    color: #ffffff;
-    font-size: 26px;
-    border: none;
-    margin-top: 10px;
-    font-family: 'Oswald', sans-serif;
-    box-shadow: 2px 4px 5px #444;
-    border-radius: 25px;
+button {
+  width: 90px;
+  height: 30px;
+  background: #607aa0ba;
+  color: #ffffff;
+  font-size: 26px;
+  border: none;
+  margin-top: 10px;
+  font-family: sans-serif;
+  box-shadow: 2px 4px 5px #444;
+  border-radius: 25px;
+
 }
 
 button:hover {
@@ -171,7 +193,7 @@ button:hover {
 
 }
 
-.mybuttons{
+.mybuttons {
   width: 250px;
   margin-left: 200px;
 
@@ -180,20 +202,24 @@ button:hover {
 #save {
   font-size: 12px;
   margin-right: 20px;
+
 }
 
 #delete {
   font-size: 12px;
+
 }
 
-h1{
-    font-size: 36px;
+h1 {
+  font-size: 36px;
+
 }
 
 footer {
   color: white;
   text-align: right;
   margin-top: 65px;
+
 }
 
 /* Reset style for HTML element on active to have no border*/
@@ -203,21 +229,22 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-family: sans-serif;
 
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-family: sans-serif;
 
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
-    color: #ffffff;
-    font-family: 'Oswald', sans-serif;
+  color: #ffffff;
+  font-family: sans-serif;
 
 }

@@ -6,11 +6,7 @@
 </head>
  <body>
 
-  <div class ="headline">
-    <div id='my'>MY</div>
-    <div id='travel'>Travel</div>
-    <div id='planner'>Planner</div>
-  </div>
+  <div class ="headline">MY Travel Planner</div>
 <section>
   <div class = "imgHolder">
     <div id="photo"></div>
@@ -28,8 +24,8 @@
     </div>
 
     <div class= "mybuttons">
-      <button onclick="Client.performAction(event)" id="save" type = "submit"> Go Travel! </button>
-      <button onclick="Client.performDelete(event)" id="delete" type = "submit"> Remove Trip </button>
+      <button id="save" type = "submit"> Go Travel ! </button>
+      <button id="delete" type = "submit"> Remove Trip </button>
     </div>
 
     <div class ="entry">
@@ -51,5 +47,14 @@
 <footer>
   Travel app By Anna Winther
 </footer>
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
 </body>
 </html>
