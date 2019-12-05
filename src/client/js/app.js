@@ -9,7 +9,7 @@ function performAction(event) {
   let dateDiff = Math.ceil(departureDate.setHours(0, 0, 0) - dateToday.setHours(0, 0, 0)) / (1000 * 3600 * 24);
   let daysLeft = dateDiff.toFixed(0);
   let weatherDate = (departureDate.getTime()) / 1000;
-  // Personal API Key for GeoNames API
+  // API Key for GeoNames API
   const apiKey = '&username=anwin';
   const baseUrl = 'http://api.geonames.org/searchJSON?q=';
 
