@@ -7,6 +7,8 @@ This project creates an asynchronous web app that uses Web API's and user data t
 - Counts down to departure
 - Delete button for erasing current trip
 
+You need a personal API key to DarkSky and to Pixabay for this app to work.
+
 
 Author - Anna Winther
 
